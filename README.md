@@ -1,5 +1,10 @@
 # Getting Started with React Hugo
 
+## How to start
+
+```npm install```\
+```npm run start```
+
 ## Introduction
 
 This repository offers a highly opinionated way to combine the raw performance of Hugo CMS https://github.com/gohugoio/hugo \
