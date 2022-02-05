@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import './index.css'
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
 const elems: HTMLCollectionOf<Element> =
   document.getElementsByTagName('component');
@@ -18,7 +19,7 @@ const importRender = (props): Promise<void> => {
   const { id, ...rest } = props;
   return new Promise((resolve) => {
     import('./components/' + id).then((module) => {
-      const component = React.createElement(module.default, rest);
+      const component = React.createElement(withRoute(module.default), rest);
       const item = document.getElementById(id);
       return ReactDOM.render(component, item, function () {
         resolve();
@@ -32,3 +33,11 @@ for (let item of elems) {
     promises.push(importRender(getElementAttrs(item)));
   }
 }
+
+const withRoute = (Component) => () => {
+  return (
+    <BrowserRouter>
+      <Component />
+    </BrowserRouter>
+  );
+};

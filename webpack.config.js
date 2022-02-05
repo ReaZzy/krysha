@@ -7,12 +7,12 @@ module.exports = {
     path: path.resolve(__dirname, 'static', 'assets'),
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss', '.html'],
   },
   module: {
     rules: [
       {
-        test: /\.js|\.jsx$/,
+        test: /\.js|\.jsx|\.tsx|\.ts$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',

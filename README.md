@@ -13,7 +13,7 @@ with the endless capabilities of React Javascript Library using https://github.c
 ## Overview
 
 The main idea behind this integration is to use Hugo CMS for defining HTML elements
-in pages/layouts/partials where React components will be rendered. 
+in pages/layouts/partials where React components will be rendered.
 
 This results in several React applications in the same HTML document allowing for a Multiple Frontend setup that can also be used as a base for a Micro-Frontend architecture
 

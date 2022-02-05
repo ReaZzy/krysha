@@ -1,8 +1,12 @@
 module.exports = {
-  purge: ['./content/**/*.html', './static/js/src/**/*.{.jsx,.tsx}', './themes/krysha/layouts/**/*.html'],
+  content: [
+    './content/**/*.html',
+    './static/js/**/*.{.jsx,.tsx}',
+    './themes/krysha/layouts/**/*{.html, .css}',
+  ],
   theme: {
-    extend: {}
+    extend: {},
   },
   variants: {},
-  plugins: []
-}
+  plugins: [require('@tailwindcss/forms')],
+};
