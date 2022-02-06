@@ -10,6 +10,7 @@
     {{- partial "hero.html" . -}}
     {{- partial "sectionWithImage.html" . -}}
     {{- partial "newsletter.html" . -}}
+    {{- partial "futures.html" . -}}
     {{- partial "footer.html" . -}}
     {{- $pathWithoutExtension := (printf "%s%s" "assets/" "bundle.js")  -}}
     {{- if (fileExists (printf "%s%s" "static/" $pathWithoutExtension)) -}}
