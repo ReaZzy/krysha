@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This repository offers a highly opinionated way to combine the raw performance of Hugo CMS https://github.com/gohugoio/hugo \\\r with the endless capabilities of React Javascript Library using https://github.com/facebook/create-react-app",
   "scripts": {
-    "start": "concurrently \"webpack --mode=development --watch\" \"hugo serve -D\"",
+    "start": "concurrently \"webpack --mode=development --watch\" \"hugo serve -D --disableFastRender\"",
     "start:debug": "webpack --mode=development --watch && hugo serve -D --debug",
     "build": "webpack --mode=production"
   },
@@ -29,6 +29,7 @@
     "postcss": "^8.4.6",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
+    "postcss-jsx": "^0.36.4",
     "postcss-loader": "^6.2.1",
     "prettier": "^2.5.1",
     "style-loader": "^3.3.1",
@@ -43,6 +44,7 @@
     "@headlessui/react": "^1.4.3",
     "@tailwindcss/forms": "^0.4.0",
     "concurrently": "^7.0.0",
+    "cssnano": "^5.0.16",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",

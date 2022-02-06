@@ -1,7 +1,7 @@
 module.exports = {
   content: [
     './content/**/*.html',
-    './static/js/**/*.{.jsx,.tsx}',
+    './static/**/*.{.js,.tsx, .html, .css}',
     './themes/krysha/layouts/**/*{.html, .css}',
   ],
   theme: {

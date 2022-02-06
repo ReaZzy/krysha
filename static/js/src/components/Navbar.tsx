@@ -1,6 +1,5 @@
-import { Popover, Disclosure } from '@headlessui/react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Popover, Disclosure } from '@headlessui/react';
 
 const Navbar: React.FC = () => {
   return (
