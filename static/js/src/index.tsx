@@ -1,7 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './index.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import App1 from './components/1';
+import App2 from './components/2';
 
 const elems: HTMLCollectionOf<Element> =
   document.getElementsByTagName('component');
@@ -38,6 +40,10 @@ const withRoute = (Component) => () => {
   return (
     <BrowserRouter>
       <Component />
+      <Routes>
+        <Route element={<App1 />} path={'1'} />
+        <Route element={<App2 />} path={'2'} />
+      </Routes>
     </BrowserRouter>
   );
 };

@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
         <>
           <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
             <div>
-              <a href="#" className="flex">
+              <a href="/" className="flex">
                 <span className="sr-only">Крыша</span>
                 <img
                   className="h-8 w-auto sm:h-10"
@@ -288,13 +288,13 @@ const Navbar: React.FC = () => {
                   )}
                 </Popover>
                 <a
-                  href="#"
+                  href="/1"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
                   Блог
                 </a>
                 <a
-                  href="#"
+                  href="/2"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
                   О сервисе
