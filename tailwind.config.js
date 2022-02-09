@@ -1,8 +1,8 @@
 module.exports = {
   content: [
-    './content/**/*.html',
+    ('./content/**/*.html',
     './static/**/*.{.js,.tsx, .html, .css}',
-    './themes/krysha/layouts/**/*{.html, .css}',
+    './themes/krysha/layouts/**/*{.html, .css}'),
   ],
   theme: {
     extend: {},

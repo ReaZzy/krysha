@@ -4,6 +4,7 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App1 from './components/1';
 import App2 from './components/2';
+import InsureForm from './components/InsureForm';
 
 const elems: HTMLCollectionOf<Element> =
   document.getElementsByTagName('component');
