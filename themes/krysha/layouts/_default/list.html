@@ -6,10 +6,11 @@
     <h1
       class='text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl'
     >
-      {{.Title}}
+      Статьи
     </h1>
     <div class='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
-      {{ range first 10 (where $.Site.RegularPages "Type" "posts" ) }}
+    {{$paginator := .Paginate (where $.Site.RegularPages "Type" "articles") 1}}
+      {{ range $paginator.Pages }}
 
       <div class='flex flex-col rounded-lg shadow-lg overflow-hidden'>
         <div class='flex-shrink-0'>
@@ -44,6 +45,50 @@
       </div>
       {{ end }}
     </div>
+
+    <ul class='inline-flex space-x-2 mx-auto max-w-7xl my-10'>
+      {{ if $paginator.HasPrev }}
+      <li>
+        <a href='{{ .Paginator.Prev.URL }}'>
+        <button
+          class='flex items-center justify-center w-10 h-10 text-indigo-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-indigo-100'>
+          <svg class='w-4 h-4 fill-current' viewBox='0 0 20 20'>
+            <path
+              d='M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z'
+              clip-rule='evenodd' fill-rule='evenodd'></path>
+          </svg>
+        </button>
+        </a>
+      </li>
+      {{ end }}
+      {{ range $paginator.Pagers }}
+      <li>
+        <a href="{{ .URL }}">
+          <button
+            class='{{ if eq . $paginator }} text-white bg-indigo-600 border border-r-0 border-indigo-600 hover:bg-indigo-700 {{else}}hover:bg-indigo-100  text-indigo-600 {{ end }} w-10 h-10 transition-colors duration-150 rounded-full focus:shadow-outline'>
+            {{ .PageNumber }}
+          </button>
+        </a>
+      </li>
+      {{end}}
+
+      {{ if $paginator.HasNext }}
+      <li>
+        <a href='{{ .Paginator.Next.URL }}'>
+        <button
+          class='flex items-center justify-center w-10 h-10 text-indigo-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-indigo-100'>
+
+            <svg class='w-4 h-4 fill-current' viewBox='0 0 20 20'>
+              <path
+                d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
+                clip-rule='evenodd' fill-rule='evenodd'></path>
+            </svg>
+
+        </button>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
   </div>
 </div>
 

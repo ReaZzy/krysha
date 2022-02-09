@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Крыша: Сервис страхования"
 theme = 'krysha'
 summaryLength = 15
+paginate = 1
 
 [build]
   writeStats = true
