@@ -11,7 +11,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -24,6 +24,6 @@
     "outDir": "./static/assets"
   },
   "include": [
-    "static/js/src"
+    "static/js/**/*"
   ]
 }

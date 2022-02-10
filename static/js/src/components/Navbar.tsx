@@ -1,51 +1,50 @@
 import React from 'react';
 import { Popover, Disclosure } from '@headlessui/react';
 
-const Navbar: React.FC = () => {
-  return (
-    <Disclosure as={'nav'} className="relative bg-white z-20">
-      {({ open }) => (
-        <>
-          <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
-            <div>
-              <a href="/" className="flex">
-                <span className="sr-only">Крыша</span>
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgiIGhlaWdodD0iNDciIHZpZXdCb3g9IjAgMCA2OCA0NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMjIuNDE1NEwzNCAwTDY4IDIyLjQxNTRWNDdMMzQgMjQuNTg0NkwwIDQ3VjIyLjQxNTRaIiBmaWxsPSIjNDU0N0Y5Ii8+Cjwvc3ZnPgo="
-                  alt=""
-                />
-              </a>
-            </div>
-            <div className="-mr-2 -my-2 md:hidden">
-              <Disclosure.Button
-                type="button"
-                className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
-                aria-expanded="false"
+const Navbar: React.FC = () => (
+  <Disclosure as="nav" className="relative bg-white z-20">
+    {({ open }) => (
+      <>
+        <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+          <div>
+            <a href="/" className="flex">
+              <span className="sr-only">Крыша</span>
+              <img
+                className="h-8 w-auto sm:h-10"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgiIGhlaWdodD0iNDciIHZpZXdCb3g9IjAgMCA2OCA0NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMjIuNDE1NEwzNCAwTDY4IDIyLjQxNTRWNDdMMzQgMjQuNTg0NkwwIDQ3VjIyLjQxNTRaIiBmaWxsPSIjNDU0N0Y5Ii8+Cjwvc3ZnPgo="
+                alt=""
+              />
+            </a>
+          </div>
+          <div className="-mr-2 -my-2 md:hidden">
+            <Disclosure.Button
+              type="button"
+              className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Открыть меню</span>
+              <svg
+                className="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
               >
-                <span className="sr-only">Открыть меню</span>
-                <svg
-                  className="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </Disclosure.Button>
-            </div>
-            <div className="hidden md:flex-1 md:flex md:items-center md:justify-between">
-              <nav className="flex space-x-10">
-                <Popover className="relative">
-                  {({ open }) => (
-                    <>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </Disclosure.Button>
+          </div>
+          <div className="hidden md:flex-1 md:flex md:items-center md:justify-between">
+            <nav className="flex space-x-10">
+              <Popover className="relative">
+                {({ open }) => (
+                  <>
                       <Popover.Button
                         type="button"
                         className="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
@@ -285,23 +284,23 @@ const Navbar: React.FC = () => {
                         </div>
                       )}
                     </>
-                  )}
-                </Popover>
-                <a
-                  href="/1"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Блог
-                </a>
-                <a
-                  href="/2"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  О сервисе
-                </a>
-                <Popover className="relative">
-                  {({ open }) => (
-                    <>
+                )}
+              </Popover>
+              <a
+                href="/1"
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Блог
+              </a>
+              <a
+                href="/2"
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                О сервисе
+              </a>
+              <Popover className="relative">
+                {({ open }) => (
+                  <>
                       <Popover.Button
                         type="button"
                         className="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
@@ -383,39 +382,39 @@ const Navbar: React.FC = () => {
                         </div>
                       )}
                     </>
-                  )}
-                </Popover>
-              </nav>
-              <div className="flex items-center md:ml-12">
-                <a
-                  href="/property"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                >
-                  Рассчитать полис
-                </a>
-                <a
-                  href="#"
-                  className="ml-8 font-bold inline-flex items-center justify-center px-4 py-2 hover:bg-gray-200 border border-transparent rounded-md"
-                >
-                  Войти
-                </a>
-              </div>
+                )}
+              </Popover>
+            </nav>
+            <div className="flex items-center md:ml-12">
+              <a
+                href="/property"
+                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              >
+                Рассчитать полис
+              </a>
+              <a
+                href="#"
+                className="ml-8 font-bold inline-flex items-center justify-center px-4 py-2 hover:bg-gray-200 border border-transparent rounded-md"
+              >
+                Войти
+              </a>
             </div>
           </div>
+        </div>
 
-          {open && (
-            <div className="absolute top-0 inset-x-0 p-1 transition transform origin-top-right md:hidden">
-              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-                <div className="pt-5 pb-6 px-5">
-                  <div className="flex items-center justify-between">
-                    <div>
+        {open && (
+        <div className="absolute top-0 inset-x-0 p-1 transition transform origin-top-right md:hidden">
+          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="pt-5 pb-6 px-5">
+              <div className="flex items-center justify-between">
+                <div>
                       <img
                         className="h-8 w-auto sm:h-10"
                         src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgiIGhlaWdodD0iNDciIHZpZXdCb3g9IjAgMCA2OCA0NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMjIuNDE1NEwzNCAwTDY4IDIyLjQxNTRWNDdMMzQgMjQuNTg0NkwwIDQ3VjIyLjQxNTRaIiBmaWxsPSIjNDU0N0Y5Ii8+Cjwvc3ZnPgo="
                         alt=""
                       />
                     </div>
-                    <div className="-mr-2">
+                <div className="-mr-2">
                       <Disclosure.Button
                         type="button"
                         className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
@@ -423,15 +422,15 @@ const Navbar: React.FC = () => {
                         <span className="sr-only">Close menu</span>
                       </Disclosure.Button>
                     </div>
-                  </div>
+              </div>
 
-                  <div className="mt-6">
-                    <nav className="grid gap-6">
+              <div className="mt-6">
+                <nav className="grid gap-6">
                       <a
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white"></div>
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white" />
                         <div className="ml-4 text-base font-medium text-gray-900">
                           Analytics
                         </div>
@@ -441,7 +440,7 @@ const Navbar: React.FC = () => {
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white"></div>
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white" />
                         <div className="ml-4 text-base font-medium text-gray-900">
                           Engagement
                         </div>
@@ -451,7 +450,7 @@ const Navbar: React.FC = () => {
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white"></div>
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white" />
                         <div className="ml-4 text-base font-medium text-gray-900">
                           Security
                         </div>
@@ -461,7 +460,7 @@ const Navbar: React.FC = () => {
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white"></div>
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white" />
                         <div className="ml-4 text-base font-medium text-gray-900">
                           Integrations
                         </div>
@@ -471,7 +470,7 @@ const Navbar: React.FC = () => {
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white"></div>
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white" />
                         <div className="ml-4 text-base font-medium text-gray-900">
                           Automations
                         </div>
@@ -481,73 +480,73 @@ const Navbar: React.FC = () => {
                         href="#"
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white"></div>
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white" />
                         <div className="ml-4 text-base font-medium text-gray-900">
                           Reports
                         </div>
                       </a>
                     </nav>
-                  </div>
-                </div>
-                <div className="py-6 px-5">
-                  <div className="grid grid-cols-2 gap-4">
-                    <a
+              </div>
+            </div>
+            <div className="py-6 px-5">
+              <div className="grid grid-cols-2 gap-4">
+                <a
                       href="#"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       Pricing
                     </a>
 
-                    <a
+                <a
                       href="#"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       Docs
                     </a>
 
-                    <a
+                <a
                       href="#"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       Enterprise
                     </a>
 
-                    <a
+                <a
                       href="#"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       Help Center
                     </a>
 
-                    <a
+                <a
                       href="#"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       Guides
                     </a>
 
-                    <a
+                <a
                       href="#"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       Events
                     </a>
 
-                    <a
+                <a
                       href="#"
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       Security
                     </a>
-                  </div>
-                  <div className="mt-6">
-                    <a
+              </div>
+              <div className="mt-6">
+                <a
                       href="#"
                       className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-900 bg-primary-600 hover:bg-primary-700"
                     >
                       Sign up
                     </a>
-                    <p className="mt-6 text-center text-base font-medium text-gray-500">
+                <p className="mt-6 text-center text-base font-medium text-gray-500">
                       Existing customer?
                       <a
                         href="#"
@@ -556,15 +555,14 @@ const Navbar: React.FC = () => {
                         Sign in
                       </a>
                     </p>
-                  </div>
-                </div>
               </div>
             </div>
-          )}
-        </>
-      )}
-    </Disclosure>
-  );
-};
+          </div>
+        </div>
+        )}
+      </>
+    )}
+  </Disclosure>
+);
 
 export default Navbar;
