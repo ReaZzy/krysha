@@ -1,9 +1,9 @@
-import { Form, Formik } from 'formik';
 import React from 'react';
-import FormInput from '../FormBlock/FormInput';
+import FormInput from '../../FormBlock/FormInput';
+import { Form, Formik } from 'formik';
 import { Link } from 'react-router-dom';
 
-const SignIn: React.FC = React.memo(() => {
+const SignUp: React.FC = React.memo(() => {
   return (
     <div className={'max-w-2xl mx-auto'}>
       <div className="flex justify-center bg-gray-50 ">
@@ -27,24 +27,21 @@ const SignIn: React.FC = React.memo(() => {
                 label={'Пароль'}
                 placeholder={'Пароль'}
               />
-              <Link to={'/iforgot'} className={'text-indigo-500 font-semibold'}>
-                Забыли пароль?
-              </Link>
               <div className={'flex flex-row justify-between items-center'}>
                 <p className="text-md text-center text-gray-600">
-                  Нет аккаунта?{' '}
-                  <a
-                    href="#"
+                  У вас уже есть аккаунт?{' '}
+                  <Link
+                    to={'/sign-in'}
                     className="font-semibold text-indigo-500 focus:text-indigo-600 focus:outline-none focus:underline"
                   >
-                    Регистрация
-                  </a>
+                    Войти
+                  </Link>
                 </p>
                 <button
                   type="submit"
                   className="font-semibold py-2 px-4 text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none duration-100 ease-in-out"
                 >
-                  Войти
+                  Регистрация
                 </button>
               </div>
             </Form>
@@ -55,4 +52,4 @@ const SignIn: React.FC = React.memo(() => {
   );
 });
 
-export default SignIn;
+export default SignUp;

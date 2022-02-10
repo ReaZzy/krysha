@@ -39,10 +39,6 @@ const withRoute = (Component: React.FC) =>
     return (
       <BrowserRouter>
         <Component />
-        <Routes>
-          <Route element={<App1 />} path="1" />
-          <Route element={<App2 />} path="2" />
-        </Routes>
       </BrowserRouter>
     );
   };

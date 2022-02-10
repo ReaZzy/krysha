@@ -46,7 +46,6 @@
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.16.7",
-    "@headlessui/react": "^1.4.3",
     "@tailwindcss/forms": "^0.4.0",
     "concurrently": "^7.0.0",
     "cssnano": "^5.0.16",
