@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
-import Breadcrumb from './Breadcrumb/Breadcrumb';
-import FormBlock from './FormBlock/FormBlock';
-import FormInput from './FormBlock/FormInput';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
+import FormBlock from '../FormBlock/FormBlock';
+import FormInput from '../FormBlock/FormInput';
 
 const InsureForm: React.FC = React.memo(() => {
   return (
