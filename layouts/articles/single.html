@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="max-w-7xl mx-auto p-6">
+  {{if .Param "topImage"}}<img
+    src='{{.Param "topImage"}}'
+    class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+  />
+  {{end}}
+  <div
+    class="max-w-7xl text-gray-900 mx-auto text-4xl lg:text-5xl font-bold my-10"
+  >
+    {{.Title | markdownify}}
+  </div>
+  {{ .Content }}
+</div>
+{{ end }}

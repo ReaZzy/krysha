@@ -13,6 +13,11 @@ module.exports = {
     rules: [
       {
         test: /\.js|\.jsx|\.tsx|\.ts$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
+      {
+        test: /\.js|\.jsx|\.tsx|\.ts$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
