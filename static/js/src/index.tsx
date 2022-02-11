@@ -1,9 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './index.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App1 from './components/1';
-import App2 from './components/2';
+import { BrowserRouter } from 'react-router-dom';
 
 const elems: HTMLCollectionOf<Element> =
   document.getElementsByTagName('component');
