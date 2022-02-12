@@ -1,9 +1,10 @@
 baseURL = "http://example.org/"
-languageCode = "en-us"
+languageCode = "ru-ru"
 title = "Крыша: Сервис страхования"
 theme = 'krysha'
 summaryLength = 15
-paginate = 1
+paginate = 2
+
 
 [build]
   writeStats = true
