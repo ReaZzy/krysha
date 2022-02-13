@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#article h1,h2,h3,h4,h5,h6 {
+  @apply font-bold text-gray-900 text-3xl my-4
+}
+#article ul {
+  @apply list-disc ml-5 my-3
+}
+#article img {
+  @apply my-5
+}
+#article h1 {
+  @apply text-5xl my-10
+}
+#article h2 {
+  @apply text-4xl my-7
+}
+#article h3 {
+  @apply text-3xl my-4
+}
