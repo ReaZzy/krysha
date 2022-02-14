@@ -1,140 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Formik } from 'formik';
+import * as Yup from 'yup';
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
-import FormBlock from '../FormBlock/FormBlock';
-import FormInput from '../FormBlock/FormInput';
+import SetUpInfoStep from './setUpInfoStep';
+
+export enum STEPS {
+  SET_UP_INFO = 'SET_UP_INFO',
+  BILLING = 'BILLING',
+}
+const validationSchema = Yup.object().shape({
+  address: Yup.string().min(3).max(64).required(),
+  house: Yup.string().min(3).max(64).required(),
+  building: Yup.string().min(3).max(64).required(),
+  location: Yup.string().min(3).max(64).required(),
+  street: Yup.string().min(3).max(64).required(),
+  flat: Yup.string().max(32).required(),
+  fullName: Yup.string().min(3).max(64).required(),
+  postalIndex: Yup.number().required(),
+  phone: Yup.string().length(12).required(),
+  email: Yup.string().email().min(3).max(64).required(),
+  isBeneficiary: Yup.boolean().required(),
+});
 
 const InsureForm: React.FC = React.memo(() => {
+  const [currentStep, setCurrentStep] = useState<STEPS>(STEPS.SET_UP_INFO);
   return (
-    <div className="max-w-7xl mx-auto bg-gray-50 rounded-lg  divide-y gap-y-5">
-      <Breadcrumb />
-      <Formik
-        initialValues={{
-          address: '',
-          house: '',
-          building: '',
-          location: '',
-          street: '',
-          flat: '',
-          fullName: '',
-          startDate: Date.now(),
-          postalIndex: 0,
-          birthday: Date.now(),
-          phone: '',
-          email: '',
-          isBeneficiary: true,
-        }}
-        onSubmit={(values) => {
-          alert(JSON.stringify(values, null, 2));
-        }}
-      >
+    <Formik
+      initialValues={{
+        address: '',
+        house: '',
+        building: '',
+        location: '',
+        street: '',
+        flat: '',
+        fullName: '',
+        startDate: '',
+        postalIndex: 0,
+        birthday: '',
+        phone: '',
+        email: '',
+        isBeneficiary: true,
+      }}
+      validationSchema={validationSchema}
+      onSubmit={(values) => {
+        if (currentStep === STEPS.BILLING)
+          return alert(JSON.stringify(values, null, 2));
+        setCurrentStep(STEPS.BILLING);
+      }}
+    >
+      {({ validateForm }) => (
         <Form>
-          <div className="p-4 px-4 md:p-8 mb-6 grid grid-cols-1  divide-y gap-y-10">
-            <FormBlock title="Адрес объекта">
-              <>
-                <FormInput
-                  name="address"
-                  placeholder="Адрес"
-                  label={'Адрес'}
-                  cols={6}
-                />
-                <FormInput
-                  name="location"
-                  placeholder="Населённый пункт"
-                  label={'Населённый пункт'}
-                  cols={3}
-                />
-                <FormInput
-                  name="street"
-                  placeholder="Улица"
-                  label={'Улица'}
-                  cols={3}
-                />
-                <FormInput
-                  name="building"
-                  placeholder="Корпус, строение"
-                  label={'Корпус, строение'}
-                  cols={3}
-                />
-                <FormInput
-                  name="flat"
-                  placeholder="Квартира"
-                  label={'Квартира'}
-                  cols={3}
-                />
-                <FormInput
-                  name="postalIndex"
-                  type={'number'}
-                  placeholder={'Почтовый индекс'}
-                  label={'Почтовый индекс'}
-                  cols={3}
-                />
-              </>
-            </FormBlock>
-            <FormBlock
-              title="Срок страхования"
-              description="Покрытие действительно на 15-й день после даты покупки. В календаре выбирете дату начала действия полиса."
-            >
-              <FormInput
-                type="date"
-                name="startDate"
-                placeholder="Дата начала страховки"
-                label={'Дата начала страховки'}
-                cols={3}
-              />
-            </FormBlock>
-            <FormBlock title="Страхователь">
-              <>
-                <FormInput
-                  name="fullName"
-                  placeholder="Фамилия Имя Отчество"
-                  label={'Фамилия Имя Отчество'}
-                  cols={6}
-                />
-                <FormInput
-                  type="date"
-                  name="birthday"
-                  placeholder="Дата рождения"
-                  label={'Дата рождения'}
-                  cols={3}
-                />
-                <FormInput
-                  type="email"
-                  name="email"
-                  placeholder="Почта"
-                  label={'Почта'}
-                  cols={6}
-                />
-                <FormInput
-                  type="tel"
-                  name="phone"
-                  placeholder="Номер телефона"
-                  label={'Номер телефона'}
-                  cols={6}
-                />
-                <FormInput
-                  type="checkbox"
-                  name="isBeneficiary"
-                  placeholder="Является выгодоприобретателем"
-                  label={'Является выгодоприобретателем'}
-                  cols={1}
-                />
-              </>
-            </FormBlock>
-          </div>
-          <div className="md:col-span-6 text-right">
-            <div className="inline-flex items-end">
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Далее
-              </button>
-            </div>
+          <div className="max-w-7xl mx-auto bg-gray-50 rounded-lg  divide-y gap-y-5">
+            <Breadcrumb
+              currentStep={currentStep}
+              setCurrentStep={setCurrentStep}
+            />
+            {currentStep === STEPS.SET_UP_INFO ? <SetUpInfoStep /> : null}
           </div>
         </Form>
-      </Formik>
-    </div>
+      )}
+    </Formik>
   );
 });
 
