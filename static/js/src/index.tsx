@@ -32,11 +32,10 @@ for (const item of elems) {
   }
 }
 
-const withRoute = (Component: React.FC) =>
-  function () {
-    return (
-      <BrowserRouter>
-        <Component />
-      </BrowserRouter>
-    );
-  };
+const withRoute = (Component: React.FC) => () => {
+  return (
+    <BrowserRouter>
+      <Component />
+    </BrowserRouter>
+  );
+};

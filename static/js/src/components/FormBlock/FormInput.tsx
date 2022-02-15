@@ -11,15 +11,18 @@ interface IProps {
 const FormInput: React.FC<IProps> = React.memo(
   ({ name, label, cols, ...props }) => {
     const [field, meta] = useField(name);
+    const hasError = meta.error && meta.touched;
     return (
       <div className={`md:col-span-${cols}`}>
         <label htmlFor={name}>{label}</label>
         <input
-          className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
           {...field}
           {...props}
+          className={`shadow appearance-none border ${
+            hasError ? 'border-red-500' : 'border-gray-300'
+          }  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-10 mt-1 rounded w-full bg-gray-50`}
         />
-        {meta.error && meta.touched && <div>{meta.error}</div>}
+        {hasError && <div className="text-red-500 text-xs">{meta.error}</div>}
       </div>
     );
   },
