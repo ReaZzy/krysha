@@ -10,4 +10,22 @@
     integrity="{{ $styles.Data.Integrity }}"
   />
   {{ end }}
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta property="description" content="{{.Summary}}" />
+  <meta
+    property="og:title"
+    content='{{default "Крыша: Сервис страхования" (.Title)}}'
+  />
+  <meta property="og:description" content="{{.Summary}}" />
+  <meta
+    property="og:image"
+    content='{{default "https://res.cloudinary.com/dalyoko/image/upload/q_80,f_jpg/v1630492365/gatsby-cloudinary/main-image"}}'
+  />
+  <meta property="og:url" content="{{.Permalink}}" />
+
+  <title>{{default "Крыша: Сервис страхования" (.Title)}}</title>
 </head>
