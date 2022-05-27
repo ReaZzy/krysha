@@ -48,17 +48,15 @@ const InsureForm: React.FC = React.memo(() => {
         setCurrentStep(STEPS.BILLING);
       }}
     >
-      {({ validateForm }) => (
-        <Form>
-          <div className="max-w-7xl mx-auto bg-gray-50 rounded-lg  divide-y gap-y-5">
-            <Breadcrumb
-              currentStep={currentStep}
-              setCurrentStep={setCurrentStep}
-            />
-            {currentStep === STEPS.SET_UP_INFO ? <SetUpInfoStep /> : null}
-          </div>
-        </Form>
-      )}
+      <Form>
+        <div className="max-w-7xl mx-auto bg-gray-50 rounded-lg  divide-y gap-y-5">
+          <Breadcrumb
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
+          {currentStep === STEPS.SET_UP_INFO ? <SetUpInfoStep /> : null}
+        </div>
+      </Form>
     </Formik>
   );
 });

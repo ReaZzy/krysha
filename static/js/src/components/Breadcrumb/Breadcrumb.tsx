@@ -1,5 +1,6 @@
 import React, { Dispatch } from 'react';
 import { STEPS } from '../InsureForm/InsureForm';
+import { useTranslation } from 'react-i18next';
 
 interface IProps {
   currentStep: STEPS;
@@ -8,6 +9,7 @@ interface IProps {
 
 const Breadcrumb: React.FC<IProps> = React.memo(
   ({ currentStep, setCurrentStep }) => {
+    const { t } = useTranslation();
     return (
       <nav
         className="flex flex-row justify-between items-center p-4 "
@@ -25,7 +27,7 @@ const Breadcrumb: React.FC<IProps> = React.memo(
                 }`}
                 onClick={() => setCurrentStep(STEPS.SET_UP_INFO)}
               >
-                Страховка
+                {t('insurance')}
               </button>
             </li>
 
@@ -51,7 +53,7 @@ const Breadcrumb: React.FC<IProps> = React.memo(
                   }`}
                   type={'submit'}
                 >
-                  Оплата
+                  {t('payment')}
                 </button>
               </div>
             </li>
@@ -64,7 +66,7 @@ const Breadcrumb: React.FC<IProps> = React.memo(
               type={'submit'}
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
-              {currentStep === STEPS.SET_UP_INFO ? 'Далее' : 'Назад'}
+              {currentStep === STEPS.SET_UP_INFO ? t('next') : t('previous')}
             </button>
           </div>
         </div>

@@ -1,100 +1,104 @@
 import React from 'react';
 import FormBlock from '../FormBlock/FormBlock';
 import FormInput from '../FormBlock/FormInput';
+import { useTranslation } from 'react-i18next';
 
 const SetUpInfoStep: React.FC = React.memo(() => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="p-4 px-4 md:p-8 mb-6 grid grid-cols-1  divide-y gap-y-10">
-        <FormBlock title="Адрес объекта">
+        <FormBlock title={t('objectAddress')}>
           <>
             <FormInput
               name="address"
-              placeholder="Адрес"
-              label={'Адрес'}
+              placeholder={t('address')}
+              label={t('address')}
               cols={6}
             />
             <FormInput
               name="location"
-              placeholder="Населённый пункт"
-              label={'Населённый пункт'}
+              placeholder={t('location')}
+              label={t('location')}
               cols={3}
             />
 
             <FormInput
               name="street"
-              placeholder="Улица"
-              label={'Улица'}
+              placeholder={t('street')}
+              label={t('street')}
               cols={3}
             />
-            <FormInput name="house" placeholder="Дом" label={'Дом'} cols={3} />
+            <FormInput
+              name="house"
+              placeholder={t('house')}
+              label={t('house')}
+              cols={3}
+            />
             <FormInput
               name="building"
-              placeholder="Корпус, строение"
-              label={'Корпус, строение'}
+              placeholder={t('locationHouse')}
+              label={t('locationHouse')}
               cols={3}
             />
             <FormInput
               name="flat"
-              placeholder="Квартира"
-              label={'Квартира'}
+              placeholder={t('flat')}
+              label={t('flat')}
               cols={3}
             />
             <FormInput
               name="postalIndex"
               type={'number'}
-              placeholder={'Почтовый индекс'}
-              label={'Почтовый индекс'}
+              placeholder={t('postalIndex')}
+              label={t('postalIndex')}
               cols={3}
             />
           </>
         </FormBlock>
-        <FormBlock
-          title="Срок страхования"
-          description="Покрытие действительно на 15-й день после даты покупки. В календаре выбирете дату начала действия полиса."
-        >
+        <FormBlock title={t('ensureLimit')} description={t('ensureLimitDesc')}>
           <FormInput
             type="date"
             name="startDate"
-            placeholder="Дата начала страховки"
-            label={'Дата начала страховки'}
+            placeholder={t('dateOfEnsurance')}
+            label={t('dateOfEnsurance')}
             cols={3}
           />
         </FormBlock>
-        <FormBlock title="Страхователь">
+        <FormBlock title={t('ensureMan')}>
           <>
             <FormInput
               name="fullName"
-              placeholder="Фамилия Имя Отчество"
-              label={'Фамилия Имя Отчество'}
+              placeholder={t('fio')}
+              label={t('fio')}
               cols={6}
             />
             <FormInput
               type="date"
               name="birthday"
-              placeholder="Дата рождения"
-              label={'Дата рождения'}
+              placeholder={t('dateOfBirth')}
+              label={t('dateOfBirth')}
               cols={3}
             />
             <FormInput
               type="email"
               name="email"
-              placeholder="Почта"
-              label={'Почта'}
+              placeholder={t('email')}
+              label={t('email')}
               cols={6}
             />
             <FormInput
               type="tel"
               name="phone"
-              placeholder="Номер телефона"
-              label={'Номер телефона'}
+              placeholder={t('phone')}
+              label={t('phone')}
               cols={6}
             />
             <FormInput
               type="checkbox"
               name="isBeneficiary"
-              placeholder="Является выгодоприобретателем"
-              label={'Является выгодоприобретателем'}
+              placeholder={t('isBeneficiary')}
+              label={t('isBeneficiary')}
               cols={1}
             />
           </>
@@ -106,7 +110,7 @@ const SetUpInfoStep: React.FC = React.memo(() => {
             type={'submit'}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
-            Далее
+            {t('next')}
           </button>
         </div>
       </div>
