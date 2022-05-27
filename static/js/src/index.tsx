@@ -2,12 +2,28 @@ import ReactDOM from 'react-dom';
 import React, { ReactPortal, useCallback, useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import i18next from 'i18next';
-import { I18nextProvider, useTranslation } from 'react-i18next';
+import {
+  I18nextProvider,
+  initReactI18next,
+  useTranslation,
+} from 'react-i18next';
 
-i18next.init({
-  interpolation: { escapeValue: false },
+i18next.use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: {
+        'Welcome to React': 'Welcome to React and react-i18next',
+      },
+    },
+  },
+  lng: window.navigator.language,
+  fallbackLng: 'ru',
+
+  interpolation: {
+    escapeValue: false,
+  },
 });
-
+console.log(window.navigator.language);
 const App: React.FC = () => {
   const elems: HTMLCollectionOf<Element> =
     document.getElementsByTagName('component');
