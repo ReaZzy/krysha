@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" class="dark h-full">
-  {{- partial "head.html" . -}}
   <body class="h-full">
+    {{- partial "head.html" . -}}
     <div id="content">
-      {{- partial "navbar.html" . -}} {{- block "main" . }}{{- end }} {{-
-      partial "footer.html" -}}
+      {{- partial "navbar.html" . -}}{{- block "main" . }}{{- end }}{{- partial
+      "footer.html" -}}
     </div>
   </body>
 </html>
