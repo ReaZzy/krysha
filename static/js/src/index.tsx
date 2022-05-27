@@ -1,6 +1,12 @@
 import ReactDOM from 'react-dom';
 import React, { ReactPortal, useCallback, useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import i18next from 'i18next';
+import { I18nextProvider, useTranslation } from 'react-i18next';
+
+i18next.init({
+  interpolation: { escapeValue: false },
+});
 
 const App: React.FC = () => {
   const elems: HTMLCollectionOf<Element> =
@@ -28,7 +34,14 @@ const App: React.FC = () => {
       .catch((e) => console.error(e));
   }, []);
 
-  return <BrowserRouter>{portals}</BrowserRouter>;
+  const { t } = useTranslation();
+  return (
+    <BrowserRouter>
+      <I18nextProvider i18n={i18next}>
+        {portals} {t('hello')}
+      </I18nextProvider>
+    </BrowserRouter>
+  );
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
