@@ -5,17 +5,15 @@
         <h2
           class="text-lg leading-6 font-bold text-gray-600 uppercase tracking-wider"
         >
-          Тарифы
+          {{i18n "variants"}}
         </h2>
         <p
           class="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl"
         >
-          Цена вопроса
+          {{i18n "priceOfQuestion"}}
         </p>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-          У нас есть два тарифа: мини-страховка и стандарт. Стандартный тариф
-          гибкий, в нем вы выбираете покрытие. В мини-страховке мы оставили
-          только самое необходимое.
+          {{i18n "weHaveTwoVariants"}}
         </p>
       </div>
     </div>
@@ -32,14 +30,16 @@
                 <h3
                   class="inline-flex py-1 rounded-full text-md font-semibold tracking-wide bg-primary-100"
                 >
-                  Мини
+                  {{i18n "mini"}}
                 </h3>
               </div>
               <div class="mt-4 flex items-baseline text-6xl font-extrabold">
                 ₽ 55
-                <span class="ml-1 text-2xl font-medium"> /мес </span>
+                <span class="ml-1 text-2xl font-medium">
+                  /{{i18n "month"}}
+                </span>
               </div>
-              <p class="mt-5 text-lg">Экономичный вариант страховой защиты</p>
+              <p class="mt-5 text-lg">{{i18n "cheepier"}}</p>
             </div>
             <div
               class="flex-1 flex flex-col px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6"
@@ -50,12 +50,10 @@
                     href="#"
                     class="flex shadow items-center justify-center px-5 py-3 border border-transparent text-base font-bold rounded-md text-white bg-[#3cff4d] hover:bg-[#3cff5d]"
                   >
-                    Оформить ->
+                    {{i18n "try"}} ->
                   </a>
                 </div>
-                <p class="py-2 text-base text-gray-600">
-                  Моментальный расчет страхового полиса
-                </p>
+                <p class="py-2 text-base text-gray-600">{{i18n "moment"}}</p>
               </div>
               <ul role="list" class="space-y-4">
                 <li class="flex items-start">
@@ -77,7 +75,7 @@
                     </svg>
                   </div>
                   <p class="ml-3 text-base text-gray-700">
-                    100 000 ₽ покрытие имущества
+                    100 000 ₽ {{i18n "coverage"}}
                   </p>
                 </li>
 
@@ -101,7 +99,7 @@
                     </svg>
                   </div>
                   <p class="ml-3 text-base text-gray-700">
-                    100 000 ₽ покрытие гражданской ответственности
+                    100 000 ₽ {{i18n "coverageGr"}}
                   </p>
                 </li>
               </ul>
@@ -114,16 +112,16 @@
                 <h3
                   class="inline-flex py-1 rounded-full text-md font-semibold tracking-wide bg-primary-100"
                 >
-                  Стандарт
+                  {{i18n "standart"}}
                 </h3>
               </div>
               <div class="mt-4 flex items-baseline text-6xl font-extrabold">
                 ₽ 79
-                <span class="ml-1 text-2xl font-medium"> /мес </span>
+                <span class="ml-1 text-2xl font-medium">
+                  /{{i18n "month"}}
+                </span>
               </div>
-              <p class="mt-5 text-lg">
-                Полноценная страховая защита для вашего дома
-              </p>
+              <p class="mt-5 text-lg">{{i18n "fullSecurity"}}</p>
             </div>
             <div
               class="flex-1 flex flex-col px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6"
@@ -134,12 +132,10 @@
                     href="#"
                     class="flex shadow items-center justify-center px-5 py-3 border border-transparent text-base font-bold rounded-md text-white bg-[#3c2dcc] hover:bg-[##3c3dcc]"
                   >
-                    Выбрать ->
+                    {{i18n "choose"}} ->
                   </a>
                 </div>
-                <p class="py-2 text-base text-gray-600">
-                  Моментальный расчет страхового полиса
-                </p>
+                <p class="py-2 text-base text-gray-600">{{i18n "moment"}}</p>
               </div>
               <ul role="list" class="space-y-4">
                 <li class="flex items-start">
@@ -160,10 +156,7 @@
                       />
                     </svg>
                   </div>
-                  <p class="ml-3 text-base text-gray-700">
-                    Внутренняя отделка, включая системы коммуникаций и
-                    оборудование
-                  </p>
+                  <p class="ml-3 text-base text-gray-700">{{i18n "inside"}}</p>
                 </li>
 
                 <li class="flex items-start">
@@ -185,7 +178,7 @@
                       />
                     </svg>
                   </div>
-                  <p class="ml-3 text-base text-gray-700">Движимое имущество</p>
+                  <p class="ml-3 text-base text-gray-700">{{i18n "apparts"}}</p>
                 </li>
                 <li class="flex items-start">
                   <div class="flex-shrink-0">
@@ -206,9 +199,7 @@
                       />
                     </svg>
                   </div>
-                  <p class="ml-3 text-base text-gray-700">
-                    Гражданская ответственность
-                  </p>
+                  <p class="ml-3 text-base text-gray-700">{{i18n "peopleF"}}</p>
                 </li>
               </ul>
             </div>
@@ -226,13 +217,11 @@
               <h3
                 class="inline-flex py-1 rounded-full text-lg font-semibold tracking-wide bg-white text-blue-400"
               >
-                ПОДДЕРЖКА
+                {{i18n "assist"}}
               </h3>
             </div>
             <div class="mt-4 mb-4 text-lg">
-              <p class="text-3xl font-bold text-gray-900">
-                Включено во все тарифные планы
-              </p>
+              <p class="text-3xl font-bold text-gray-900">{{i18n "allIn"}}</p>
 
               <ul
                 role="list"
@@ -257,7 +246,7 @@
                     </svg>
                   </div>
                   <p class="ml-3 text-lg text-gray-600">
-                    Бесплатная консультация в выборе страхового продукта
+                    {{i18n "freeConsult"}}
                   </p>
                 </li>
 
@@ -281,7 +270,7 @@
                     </svg>
                   </div>
                   <p class="ml-3 text-lg text-gray-600">
-                    Помощь в урегулировании вопросов гражданской ответственности
+                    {{i18n "helpWithQuestions"}}
                   </p>
                 </li>
                 <li class="flex items-start max-w-xl">
@@ -304,8 +293,7 @@
                     </svg>
                   </div>
                   <p class="ml-3 text-lg text-gray-600">
-                    Помощь в оформлении документов при возникновении страхового
-                    случая
+                    {{i18n "helpWithPapers"}}
                   </p>
                 </li>
               </ul>
@@ -321,14 +309,14 @@
       <div class="bg-white shadow-lg px-6 py-8 sm:p-10 lg:flex lg:items-center">
         <div class="flex-1">
           <p class="text-4xl font-extrabold text-gray-900">
-            Застраховать недвижимость просто
+            {{i18n "itsEasy"}}
           </p>
 
           <div>
             <h3
               class="inline-flex py-1 rounded-full text-xl mt-24px tracking-wide bg-white text-gray-600"
             >
-              Всего три шага — и ваш дом надежно застрахован
+              {{i18n "threeSteps"}}
             </h3>
           </div>
         </div>
@@ -356,9 +344,7 @@
                 />
               </svg>
             </div>
-            <p class="ml-3 text-lg">
-              Бесплатная консультация в выборе страхового продукта
-            </p>
+            <p class="ml-3 text-lg">{{i18n "freeHelp"}}</p>
           </li>
 
           <li class="flex items-start max-w-xl">
@@ -380,9 +366,7 @@
                 />
               </svg>
             </div>
-            <p class="ml-3 text-lg">
-              Помощь в урегулировании вопросов гражданской ответственности
-            </p>
+            <p class="ml-3 text-lg">{{i18n "helpMeIn"}}</p>
           </li>
           <li class="flex items-start max-w-xl">
             <div class="flex-shrink-0">
@@ -403,9 +387,7 @@
                 />
               </svg>
             </div>
-            <p class="ml-3 text-lg">
-              Помощь в оформлении документов при возникновении страхового случая
-            </p>
+            <p class="ml-3 text-lg">{{i18n "helpBuy"}}</p>
           </li>
         </ul>
         <div class="rounded-md my-6">
@@ -413,7 +395,7 @@
             href="#"
             class="flex shadow items-center justify-center px-5 py-3 mx-auto border border-transparent text-base md:max-w-lg font-bold rounded-md text-gray-900 bg-[#3cff4d] hover:bg-[#3cff5d]"
           >
-            Оформить
+            {{i18n "buy"}}
           </a>
         </div>
       </div>

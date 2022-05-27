@@ -1,0 +1,352 @@
+
+[home]
+other = "House"
+[alreadyRegistered]
+other = "Already insured?"
+[alreadyRegistered1]
+other = "Go to the Roof!"
+[compare]
+other = "Compare our prices"
+[ourConditionals]
+other = "Read our terms and conditions"
+[conditionals]
+other = "Insurance Terms"
+[forBetterUnderstanding]
+other = "For a better understanding of the insurance product, please read the insurance policy and pay tables."
+[isCool]
+other = "If you are not satisfied with your current insurer, welcome to us. Your interests are really important to us and we are grateful for the business that you trust us, so we will do our best to justify your trust."
+[rules]
+other = "Insurance rules"
+[table]
+other = "Paytable"
+[shablon]
+other = "Document Templates"
+[expections]
+other = "Coverage exclusions"
+[payment]
+other = "Payment and delivery"
+[easyEnsurance]
+other = "Convenient insurance"
+[flatsAndHomes]
+other = "houses, apartments"
+[rewiewDesc]
+other = "Good project. It's convenient for me to pay for insurance on a monthly basis. But the most important thing is prompt communication with support and a human attitude, without constant change of operators who need to explain everything all over again."
+[rewiewName]
+other = "Catherine Z."
+[rewiewJob]
+other = "MANAGER"
+[rewiew1Desc]
+other = "The most common insured events are apartment floods in case of utility accidents. According to insurers, they account for about 70% of all losses. The average amount of damage from a flood is from 100,000 ₽ to 150,000 ₽."
+[rewiew1Name]
+other = "Sergey G."
+[rewiew1Job]
+other = "BRAND MANAGER"
+[whyUs]
+other = "Why the Roof is chosen"
+[polis]
+other = "REPLACE POLICY"
+[withoutPaper]
+other = "Paperless Insurance"
+[noTimeForPaperwork]
+other = "There is no need to spend time on paperwork, everything is digital."
+[youCan]
+other = "You can insure civil liability separately from the construct."
+[goodSettings]
+other = "Flexible policy settings"
+[individualCoverage]
+other = "Custom coverage"
+[configureByYourself]
+other = "Customize your own risk set and find the coverage that's right for you and your home."
+[noReviewNeeded]
+other = "No inspection or evaluation required"
+[ourProducts]
+other = "Our products are based on trust and convenience. We have omitted inspection and evaluation to avoid wasting the customer's time and making the product expensive."
+[dontHaveAccount]
+other = "Don't have an account?"
+[register]
+other = "Register"
+[orLogin]
+other = "or log in"
+[signin]
+other = "Login"
+[forgotPassword]
+other = "Forgot your password?"
+[security]
+other = "Home Protection"
+[allArticles]
+other = "All Articles"
+[buy]
+other = "Checkout"
+[helpBuy]
+other = "Assistance in paperwork in the event of an insured event"
+[password]
+other = "Password"
+[email]
+other = "Mail"
+[signinToAccount]
+other = "Log in to your account"
+[helpMeIn]
+other = "Help with Civil Liability Issues"
+[freeHelp]
+other = "Free consultation in choosing an insurance product"
+[threeSteps]
+other = "Just three steps and your home is fully insured"
+[ensure1]
+other = "Property insurance"
+[ensure1Desc]
+other = "Roof is a service where people take out insurance for houses and apartments."
+[ensure1Desc1]
+other = "To apply for insurance, you must specify the address of the object, select coverage and enter the policyholder's data: date of birth, last name, first name, patronymic and contact details. In 2 minutes after payment, you will receive an insurance policy at your postal address."
+[ensure1Desc2]
+other = "Inspection and visit to the company's office is not required."
+[itsEasy]
+other = "It's easy to insure your property"
+[helpWithPapers]
+other = "Assistance in paperwork in the event of an insured event"
+[helpWithQuestions]
+other = "Help with Civil Liability Issues"
+[freeConsult]
+other = "Free consultation in choosing an insurance product"
+[assist]
+other = "SUPPORT"
+[allIn]
+other = "Included in all plans"
+[variants]
+other = "Rates"
+[priceOfQuestion]
+other = "Ask price"
+[weHaveTwoVariants]
+other = "We have two rates: mini-insurance and standard. The standard rate is flexible, it allows you to choose the coverage. In the mini-insurance, we left only the most necessary."
+[mini]
+other = "Mini"
+[month]
+other = "month"
+[cheepier]
+other = "Economical insurance cover"
+[try]
+other = "Checkout"
+[moment]
+other = "Instant insurance policy calculation"
+[coverage]
+other = "property coverage"
+[coverageGr]
+other = "civil liability coverage"
+[standart]
+other = "Standard"
+[fullSecurity]
+other = "Complete insurance coverage for your home"
+[choose]
+other = "Select"
+[peopleF]
+other = "Civil Liability"
+[apparts]
+other = "Movable property"
+[inside]
+other = "Interior decoration, including communications systems and equipment"
+[getBestPrice]
+other = "Get the best price"
+[calculatePrice]
+other = "Calculate the cost of an insurance policy"
+[address]
+other = "Address"
+[calculate]
+other = "Calculate"
+[protectData]
+other = "We care about the protection of your data. Read our"
+[privatePolicy]
+other = "Privacy Policy."
+[mostImportant]
+other = "The most important thing in apartment insurance"
+[all]
+other = "all"
+[theBest]
+other = "Meticulous attention to detail is the foundation of our relationship."
+[stage]
+other = "The total cost of structural elements varies depending on the floor."
+[elements]
+other = "Constructive elements"
+[robberSecurity]
+other = "Your property is insured against thieves, but not against scammers or extortionists. See insurance policy for exceptions."
+[thirdFaces]
+other = "Third Party Activities"
+[ourProducts1]
+other = "Our products are based on trust and convenience. We have omitted inspection and evaluation to avoid wasting the customer's time and making the product expensive."
+[mine]
+other = "property"
+[comminment]
+other = "Civil Liability"
+[inEnsure]
+other = "In the event of an insured event, immediately document the damage and notify the insurer. Otherwise, the accident may not be recognized as an insured event."
+[isSerious]
+other = "Roof, are you serious?"
+[kryshaIs]
+other = "Roof is a new type of insurance agent and helper. We're not trying to pretend insurance is easy. It's a complex product that needs to be clearly explained to the client and build a beneficial relationship for everyone."
+[kryshaDesc]
+other = "Our rule of thumb is honesty and directness. We don't invent marketing gimmicks or use jargon to confuse the customer. Instead, we develop and sell clear insurance products, work with only one insurance company for one product we've tested, and We make life easier for our clients by helping in emergency cases."
+[mark]
+other = "Mark Krymov"
+[markJob]
+other = "Roof Founder"
+[whyUs1]
+other = "We do not treat clients as potential scammers"
+[whyUs2]
+other = "The biggest injustice is when an insurance company tries to find signs of fraud in a person's misfortune."
+[whyUs3]
+other = "Don't bombard the user with insurance product options"
+[whyUs4]
+other = "Insurance aggregators, in our opinion, overload information and hide important product details from the client."
+[whyUs5]
+other = "We are not trying to sell a product that will bring us a large commission"
+[whyUs6]
+other = "This is the most common practice among agents. We value relationships with you, they are the basis of our business."
+[momentEnsure]
+other = "Immediately insure flats, apartments, country houses, dachas, cottages"
+[easyService]
+other = "Great prices and friendly service."
+[miniEnsure]
+other = "Mini Insurance"
+[comparePrices]
+other = "Compare prices"
+[alreadyEnsured]
+other = "Already insured? We'll help you switch."
+[areYouReady]
+other = "Ready to insure?"
+[risks]
+other = "Here are the risks we cover"
+[calculatePolis]
+other = "Calculate policy"
+[askAQuestion]
+other = "Ask a question"
+[fire]
+other = "Fire"
+[fireDesc]
+other = "Insurance will cover damage in case of fire"
+[explosion]
+other = "Explosion"
+[explosionDesc]
+other = "Let's cover the damage in case of an explosion"
+[naturalObs]
+other = "Natural hazards"
+[naturalObsDesc]
+other = "Protecting your home from natural hazards"
+[thirdFacesObs]
+other = "Third Party Misconduct"
+[thirdFacesObsDesc]
+other = "We compensate losses from the actions of third parties"
+[waterObs]
+other = "Bay"
+[waterObsDesc]
+other = "In the event of a flood, we will deal with the damage to your property"
+[engeneeringObs]
+other = "Engineering systems failure"
+[engeneeringObsDesc]
+other = "In the event of a utility system failure, we will also cover the costs as part of the insurance coverage."
+[outsideDoings]
+other = "External influence"
+[outsideDoingsDesc]
+other = "A catastrophe scenario is also included in the insurance policy."
+[weEnsure]
+other = "For third party liability insurance"
+[weEnsureDesc]
+other = "The following risks are insured: Fire, Explosion, Engineering systems accident, Falling trees"
+[whyKrysha]
+other = "Roof Features"
+[knowMore]
+other = "Learn more"
+[kryshaIs1]
+other = "The roof is a new generation insurance service. Together with insurance companies, we develop products and serve them in the future: we sell, we provide support to customers. Our most important difference is that we have no conflict of interest and we can say with confidence that we are on the client side."
+[ourSupport]
+other = "Our support is always in touch, chat, phone or email. We will be happy to advise you and help you with any question about the house and insurance."
+[allDaySupport]
+other = "Online 24/7"
+[ourVariants]
+other = "Everyone's needs are unique. We understand this and make custom rates that are easy to understand."
+[ourPayouts]
+other = "Timely payments"
+[weWillDo]
+other = "We will make every effort to ensure that you receive timely payment for an insured event."
+[variantTo]
+other = "Flexible tariff setting"
+[newCase]
+other = "When an insured event occurs"
+[youShould]
+other = "Let us know what happened via chat, email or phone. The operator will help prepare a package of documents for I am considering an insured event, and you will receive compensation as soon as possible."
+[report]
+other = "Report insured event"
+[onFire]
+other = "In case of fire"
+[onFireDesc]
+other = "Call the fire department, and then write or call us. The operator will guide you and help you with the paperwork."
+[onEDoings]
+other = "In case of illegal actions"
+[onEDoingsDesc]
+other = "Call the police and let us know what happened. We will record the insured event and accompany you until we receive compensation."
+[onWater]
+other = "When flooded"
+[onWaterDesc]
+other = "Call your property manager and then let us know what happened. We'll resolve the issue."
+[krysha]
+other = "krysha"
+[openMenu]
+other = "Open Menu"
+[sign]
+other = "Login"
+[alreadyHaveAnAccount]
+other = "Do you already have an account?"
+[articles]
+other = "Articles"
+[aboutService]
+other = "About service"
+[blog]
+other = "Blog"
+[ensure]
+other = "Insurance"
+[closeMenu]
+other = "Close Menu"
+[news]
+other = "News"
+[FAQ]
+other = "FAQ"
+[aboutCompany]
+other = "About"
+[partnership]
+other = "Partners"
+[documents]
+other = "Documents"
+[whereToPay]
+other = "Details"
+[garanty]
+other = "Warranty"
+[payOnline]
+other = "Online policy calculation"
+[about]
+other = "About us"
+[contacts]
+other = "Contacts"
+[assistance]
+other = "Support"
+[contactUs]
+other = "Contact us"
+[beOurPartner]
+other = "Cooperation"
+[agents]
+other = "Agents"
+[presa]
+other = "Press"
+[subscribe]
+other = "Subscribe to our updates"
+[subscribeNews]
+other = "Subscribe to our newsletter and receive special offers."
+[sub]
+other = "Subscribe"
+[weAcept]
+other = "We accept:"
+[weAreProtected]
+other = "All rights reserved"
+[acepting]
+other = "Interaction Agreement"
+[personalData]
+other = "About personal data"
+[ensureBy]
+other = "Insurance services provided:"
+

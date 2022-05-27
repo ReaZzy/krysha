@@ -1,41 +1,34 @@
 import ReactDOM from 'react-dom';
-import React from 'react';
-import './index.css';
+import React, { ReactPortal, useCallback, useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-const elems: HTMLCollectionOf<Element> =
-  document.getElementsByTagName('component');
-const promises = [];
+const App: React.FC = () => {
+  const elems: HTMLCollectionOf<Element> =
+    document.getElementsByTagName('component');
+  const [portals, setPortals] = useState<ReactPortal[]>([]);
+  const importRender = useCallback(async (id: string): Promise<ReactPortal> => {
+    const module = await import(`./components/${id}`);
+    const component = React.createElement(module?.default);
+    const item = document.getElementById(id);
+    return ReactDOM.createPortal(component, item!);
+  }, []);
 
-const getElementAttrs = (el: Element) => {
-  const props: { [key: string]: string } = {};
-  [].slice.call(el.attributes).map(({ name, value }) => (props[name] = value));
-  return props;
-};
+  useEffect(() => {
+    const promises: Promise<ReactPortal>[] = [];
 
-const importRender = (props: { [key: string]: string }): Promise<void> => {
-  const { id, ...rest } = props;
-  return new Promise((resolve) => {
-    import(`./components/${id}`).then((module) => {
-      const component = React.createElement(withRoute(module.default), rest);
-      const item = document.getElementById(id);
-      return ReactDOM.render(component, item, () => {
-        resolve();
-      });
+    Array.prototype.slice.call(elems).forEach((item: Element) => {
+      if (item.hasAttribute('id') && !item.hasAttribute('isPage')) {
+        const id = item.attributes.getNamedItem('id')!.nodeValue!;
+        promises.push(importRender(id));
+      }
     });
-  });
+
+    Promise.all(promises)
+      .then((values) => setPortals(values))
+      .catch((e) => console.error(e));
+  }, []);
+
+  return <BrowserRouter>{portals}</BrowserRouter>;
 };
 
-for (const item of elems) {
-  if (item.hasAttribute('id')) {
-    promises.push(importRender(getElementAttrs(item)));
-  }
-}
-
-const withRoute = (Component: React.FC) => () => {
-  return (
-    <BrowserRouter>
-      <Component />
-    </BrowserRouter>
-  );
-};
+ReactDOM.render(<App />, document.getElementById('root'));

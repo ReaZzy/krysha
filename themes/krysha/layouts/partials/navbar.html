@@ -5,7 +5,7 @@
     >
       <div>
         <a href="/" class="flex">
-          <span class="sr-only">Крыша</span>
+          <span class="sr-only">{{i18n "krysha"}}</span>
           <img
             class="h-8 w-auto sm:h-10"
             src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjgiIGhlaWdodD0iNDciIHZpZXdCb3g9IjAgMCA2OCA0NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMjIuNDE1NEwzNCAwTDY4IDIyLjQxNTRWNDdMMzQgMjQuNTg0NkwwIDQ3VjIyLjQxNTRaIiBmaWxsPSIjNDU0N0Y5Ii8+Cjwvc3ZnPgo="
@@ -19,7 +19,7 @@
           class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
           id="open-menu-button"
         >
-          <span class="sr-only">Открыть меню</span>
+          <span class="sr-only">{{i18n "openMenu"}}</span>
           <svg
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@
             class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
             id="insure-button"
           >
-            <span>Страховка</span>
+            <span>{{i18n "ensure"}}</span>
             <svg
               class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
               xmlns="http://www.w3.org/2000/svg"
@@ -75,14 +75,18 @@
                   class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
                 >
                   <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Мини</p>
+                    <p class="text-base font-medium text-gray-900">
+                      {{i18n "mini"}}
+                    </p>
                   </div> </a
                 ><a
                   href="/property/"
                   class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
                 >
                   <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Стандарт</p>
+                    <p class="text-base font-medium text-gray-900">
+                      {{i18n "standart"}}
+                    </p>
                   </div>
                 </a>
               </div>
@@ -92,14 +96,14 @@
             href="/articles"
             class="text-base font-medium text-gray-500 hover:text-gray-900"
           >
-            Блог
+            {{i18n "blog"}}
           </a>
           <button
             type="button"
             class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
             id="blogs-button"
           >
-            <span>О сервисе</span>
+            <span>{{i18n "aboutService"}}</span>
 
             <svg
               class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
@@ -116,10 +120,10 @@
             </svg>
           </button>
           <a
-            href="/2"
+            href="/articles"
             class="text-base font-medium text-gray-500 hover:text-gray-900"
           >
-            Статьи
+            {{i18n "articles"}}
           </a>
           <a
             href="tel:+74954090911"
@@ -144,37 +148,7 @@
                 >
                   <div class="ml-4">
                     <p class="text-base font-medium text-gray-900">
-                      Оплата и доставка
-                    </p>
-                  </div> </a
-                ><a
-                  href="/property/"
-                  class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
-                >
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Реквизиты</p>
-                  </div> </a
-                ><a
-                  href="/property/"
-                  class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
-                >
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Документы</p>
-                  </div> </a
-                ><a
-                  href="/property/"
-                  class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
-                >
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Партнерам</p>
-                  </div> </a
-                ><a
-                  href="/property/"
-                  class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
-                >
-                  <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">
-                      О компании
+                      {{i18n "payment"}}
                     </p>
                   </div> </a
                 ><a
@@ -183,7 +157,43 @@
                 >
                   <div class="ml-4">
                     <p class="text-base font-medium text-gray-900">
-                      Частые вопросы
+                      {{i18n "whereToPay"}}
+                    </p>
+                  </div> </a
+                ><a
+                  href="/property/"
+                  class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      {{i18n "documents"}}
+                    </p>
+                  </div> </a
+                ><a
+                  href="/property/"
+                  class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      {{i18n "partnership"}}
+                    </p>
+                  </div> </a
+                ><a
+                  href="/property/"
+                  class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      {{i18n "aboutCompany"}}
+                    </p>
+                  </div> </a
+                ><a
+                  href="/property/"
+                  class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
+                >
+                  <div class="ml-4">
+                    <p class="text-base font-medium text-gray-900">
+                      {{i18n "FAQ"}}
                     </p>
                   </div> </a
                 ><a
@@ -191,14 +201,18 @@
                   class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
                 >
                   <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Блог</p>
+                    <p class="text-base font-medium text-gray-900">
+                      {{i18n "blog"}}
+                    </p>
                   </div> </a
                 ><a
                   href="/news/"
                   class="-m-3 p-1 flex items-start rounded-lg hover:bg-gray-50"
                 >
                   <div class="ml-4">
-                    <p class="text-base font-medium text-gray-900">Новости</p>
+                    <p class="text-base font-medium text-gray-900">
+                      {{i18n "news"}}
+                    </p>
                   </div>
                 </a>
               </div>
@@ -230,7 +244,7 @@
                 id="close-menu-button"
                 class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
               >
-                <span class="sr-only">Закрыть меню</span>
+                <span class="sr-only">{{i18n "closeMenu"}}</span>
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -256,7 +270,7 @@
                 class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
               >
                 <div class="ml-4 text-base font-medium text-gray-900">
-                  Страховка
+                  {{i18n "ensure"}}
                 </div>
               </a>
 
@@ -264,15 +278,8 @@
                 href="/articles"
                 class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
               >
-                <div class="ml-4 text-base font-medium text-gray-900">Блог</div>
-              </a>
-
-              <a
-                href="#"
-                class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-              >
                 <div class="ml-4 text-base font-medium text-gray-900">
-                  О сервисе
+                  {{i18n "blog"}}
                 </div>
               </a>
 
@@ -281,7 +288,16 @@
                 class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
               >
                 <div class="ml-4 text-base font-medium text-gray-900">
-                  Статьи
+                  {{i18n "aboutService"}}
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+              >
+                <div class="ml-4 text-base font-medium text-gray-900">
+                  {{i18n "articles"}}
                 </div>
               </a>
 
@@ -302,15 +318,15 @@
               href="/sign-up"
               class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-900 bg-primary-600 hover:bg-primary-700"
             >
-              Зарегистрироваться
+              {{i18n "register"}}
             </a>
             <p class="mt-6 text-center text-base font-medium text-gray-500">
-              У вас уже есть аккаунт?
+              {{i18n "alreadyHaveAnAccount"}}
               <a
                 href="/sign-in"
                 class="text-primary-600 hover:text-primary-500"
               >
-                Войти
+                {{i18n "sign"}}
               </a>
             </p>
           </div>

@@ -5,7 +5,7 @@
     <h2
       class='text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl'
     >
-      Защита дома
+      {{i18n "security"}}
     </h2>
     <div class='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
       {{ range first 3 (where $.Site.RegularPages "Type" "articles" ) }}
@@ -48,7 +48,7 @@
         class='text-xl tracking-tight font-bold text-blue-500 lg:text-2xl '
         href='/articles'
       >
-        Все статьи ->
+        {{i18n "allArticles"}} ->
       </a>
     </div>
   </div>

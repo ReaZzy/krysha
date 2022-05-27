@@ -28,4 +28,118 @@
   <meta property="og:url" content="{{.Permalink}}" />
 
   <title>{{default "Крыша: Сервис страхования" (.Title)}}</title>
+  {{- $pathWithoutExtension := (printf "%s%s" "assets/" "bundle.js") -}} {{- if
+  (fileExists (printf "%s%s" "static/" $pathWithoutExtension)) -}}
+  <script defer src="{{ $pathWithoutExtension | absURL }}"></script>
+  {{- end -}}
+  <script src="https://unpkg.com/lunr/lunr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.0.0/lunr.stemmer.support.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.0.0/lunr.ru.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.0.0/lunr.multi.js"></script>
+  <script>
+    let pagesIndex, searchIndex;
+
+    const initSearchIndex = async () => {
+      try {
+        const response = await fetch('../../search.json');
+        pagesIndex = await response.json();
+        searchIndex = lunr(function () {
+          this.ref('uri');
+          this.use(lunr.multiLanguage('ru', 'en'));
+          this.field('title', {
+            boost: 15,
+          });
+          this.field('tags');
+          this.field('content', {
+            boost: 10,
+          });
+          pagesIndex.forEach((page) => this.add(page));
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
+    const searchBoxFocused = () => {
+      document.querySelector('.search-container').classList.add('focused');
+      document
+        .getElementById('search')
+        .addEventListener('focusout', () => searchBoxFocusOut());
+    };
+
+    const searchBoxFocusOut = () => {
+      document.querySelector('.search-container').classList.remove('focused');
+    };
+
+    const handleSearchQuery = (event) => {
+      event.preventDefault();
+      const query = document
+        .getElementById('search')
+        ?.value?.trim()
+        ?.toLowerCase();
+      if (!query) {
+        return displayErrorMessage('Please enter a search term');
+      }
+      const results = searchSite(query);
+      console.log(results);
+      if (!results.length) {
+        return displayErrorMessage('Your search returned no results');
+      }
+    };
+
+    const displayErrorMessage = (message) => {
+      document.querySelector('.search-error-message').innerHTML = message;
+      document.querySelector('.search-container').classList.remove('focused');
+      document.querySelector('.search-error').classList.remove('hide-element');
+      document.querySelector('.search-error').classList.add('fade');
+    };
+
+    const removeAnimation = () => {
+      this.classList.remove('fade');
+      this.classList.add('hide-element');
+      document.querySelector('.search-container').classList.add('focused');
+    };
+
+    const searchSite = (query) => {
+      const lunarQuery = getLunrSearchQuery(query);
+      let results = getSearchResults(query);
+      return results.length ? results : query !== lunarQuery ? lunarQuery : [];
+    };
+
+    const getSearchResults = (query) => {
+      return searchIndex.search(query).flatMap((hit) => {
+        return pagesIndex.find((page) => page.uri === hit.ref);
+      });
+    };
+
+    const getLunrSearchQuery = (query) => {
+      const searchTerms = query.split(' ');
+      if (searchTerms.length === 1) {
+        return query;
+      }
+      query = '';
+      for (const term of searchTerms) {
+        query += `+${term} `;
+      }
+      return query.trim();
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (document.getElementById('search-form') != null) {
+        const searchInput = document.getElementById('search');
+        searchInput.addEventListener('focus', () => searchBoxFocused());
+        searchInput.addEventListener('keydown', (event) => {
+          if (event.keyCode === 13) handleSearchQuery(event);
+        });
+        document
+          .querySelector('.search-error')
+          .addEventListener('animationend', removeAnimation);
+        document
+          .querySelector('.fa-search')
+          .addEventListener('click', (event) => handleSearchQuery(event));
+      }
+    });
+
+    initSearchIndex();
+  </script>
 </head>

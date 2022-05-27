@@ -6,9 +6,5 @@
       {{- partial "navbar.html" . -}} {{- block "main" . }}{{- end }} {{-
       partial "footer.html" -}}
     </div>
-    {{- $pathWithoutExtension := (printf "%s%s" "assets/" "bundle.js") -}} {{-
-    if (fileExists (printf "%s%s" "static/" $pathWithoutExtension)) -}}
-    <script src="{{ $pathWithoutExtension | absURL }}"></script>
-    {{- end -}}
   </body>
 </html>

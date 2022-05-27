@@ -1,10 +1,32 @@
 baseURL = "http://example.org/"
-languageCode = "ru-ru"
+languageCode = "ru-RU"
 title = "Крыша: Сервис страхования"
 theme = 'krysha'
 summaryLength = 15
 paginate = 2
-
+DefaultContentLanguage = "ru"
 
 [build]
   writeStats = true
+
+[outputFormats.SearchIndex]
+  baseName = "search"
+  mediaType = "application/json"
+
+[outputs]
+  home = [ "HTML", "RSS", "SearchIndex" ]
+
+
+[languages]
+  [languages.ru]
+    contentDir = "content/ru"
+    title = "Крыша: Сервис страхования"
+    languageName = "Russian"
+    languageCode = "ru"
+    weight = 1
+  [languages.en]
+    contentDir = "content/en"
+    title = "Krysha: ensurance service"
+    languageName = "English"
+    languageCode = "en"
+    weight = 2

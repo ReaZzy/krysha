@@ -13,19 +13,15 @@
       <h2
         class="text-3xl font-extrabold text-gray-900 sm:text-4xl sm:tracking-tight lg:text-5xl"
       >
-        При наступлении страхового случая
+        {{i18n "newCase"}}
       </h2>
-      <p class="mt-5 text-xl text-gray-700">
-        Сообщите нам о произошедшем в чате, по электронной почте или по
-        телефону. Оператор поможет подготовить пакет документов для рассмотрения
-        страхового случая, и в кратчайшие сроки вы получите компенсацию.
-      </p>
+      <p class="mt-5 text-xl text-gray-700">{{i18n "youShould"}}</p>
       <div class="inline-flex rounded-md shadow z-20 my-10">
         <a
           href="#"
           class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
         >
-          Сообщить о страховом случае ->
+          {{i18n "report"}} ->
         </a>
       </div>
     </div>
@@ -54,13 +50,10 @@
           </svg>
           <dt>
             <p class="mt-5 text-xl leading-6 font-extrabold text-blue-600">
-              При пожаре
+              {{i18n "onFire"}}
             </p>
           </dt>
-          <dd class="mt-2 text-lg text-gray-600">
-            Вызовите пожарную службу, а затем напишите или позвоните нам.
-            Оператор сориентирует и поможет с оформлением документов.
-          </dd>
+          <dd class="mt-2 text-lg text-gray-600">{{i18n "onFireDesc"}}</dd>
         </div>
 
         <div>
@@ -81,13 +74,10 @@
           </svg>
           <dt>
             <p class="mt-5 text-xl leading-6 font-extrabold text-blue-600">
-              При противоправных действиях
+              {{i18n "onEDoings"}}
             </p>
           </dt>
-          <dd class="mt-2 text-lg text-gray-700">
-            Вызовите полицию и сообщите нам о произошедшем. Мы зафиксируем
-            страховой случай и будем сопровождать вас до получения компенсации.
-          </dd>
+          <dd class="mt-2 text-lg text-gray-700">{{i18n "onEDoingsDesc"}}</dd>
         </div>
 
         <div>
@@ -109,15 +99,48 @@
           </svg>
           <dt>
             <p class="mt-5 text-xl leading-6 font-extrabold text-blue-600">
-              При затоплении
+              {{i18n "onWater"}}
             </p>
           </dt>
-          <dd class="mt-2 text-lg text-gray-700">
-            Вызовите сотрудников управляющей организации вашего дома, а затем
-            сообщите нам о случившемся. Мы решим вопросы.
-          </dd>
+          <dd class="mt-2 text-lg text-gray-700">{{i18n "onWaterDesc"}}</dd>
         </div>
       </dl>
+
+      <div id="site-search">
+        <h4><span class="underline--magical">Search</span></h4>
+        <div class="search-flex">
+          <form
+            id="search-form"
+            name="searchForm"
+            role="form"
+            onsubmit="return false"
+          >
+            <div class="search-wrapper">
+              <div class="search-container">
+                <i class="fa fa-search"></i>
+                <input
+                  autocomplete="off"
+                  placeholder=""
+                  id="search"
+                  class="search-input"
+                  aria-label="Search site"
+                  type="text"
+                  name="q"
+                />
+              </div>
+              <div class="search-error hide-element">
+                <span class="search-error-message"></span>
+              </div>
+            </div>
+          </form>
+          <button
+            id="clear-search-results-sidebar"
+            class="button clear-search-results hide-element"
+          >
+            {{i18n "home"}}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
